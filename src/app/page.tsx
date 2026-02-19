@@ -1,65 +1,393 @@
 import Image from "next/image";
-
+import Link from "next/link";
+import HeaderComponent from "./components/header_component";
+import TopNavigationComponent from "./components/top_navigation_component";
+import HiddenNavigationComponent from "./components/hidden_navigation";
+import homeStyle from "@/app/styles/home.module.css";
+import TopWave from "./components/icons/top_wave";
+import BottomWave from "./components/icons/bottom_wave";
+import CalendarIcon from "./components/icons/calendar_icon";
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <html>
+      <head></head>
+      <body>
+        <>
+          <HeaderComponent></HeaderComponent>
+          <TopNavigationComponent></TopNavigationComponent>
+          <HiddenNavigationComponent></HiddenNavigationComponent>
+          <div
+            className={`${homeStyle["hero-section"]} ${homeStyle["margin-top"]}`}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <div className={`${homeStyle["hero-section-logo"]}`}>
+              <Image
+                src="/assets/logo-psi-baru.webp"
+                loading="eager"
+                width={290}
+                height={80}
+                alt="Logo PSI"
+                className={`${homeStyle["hero-section-logo-image"]}`}
+              ></Image>
+              <h1 style={{ margin: "0 0 0 8px" }}>Partai Super Tbk.</h1>
+            </div>
+            <h1 className={`${homeStyle["hero-section-title"]}`}>
+              Jane Nadeak, Ketua DPC PSI Bojongsari Depok
+            </h1>
+          </div>
+          <div
+            className={`${homeStyle["daftar-anggota-relawan-flex-row"]} ${homeStyle["daftar-anggota-relawan-flex-column"]}`}
           >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+            <Link href={"https://psi.id/menjadi-anggota/"}>Daftar Anggota</Link>
+            <Link href={"https://psi.id/pendaftaran-relawan-tanggap-bencana/"}>
+              Daftar Relawan
+            </Link>
+          </div>
+          <TopWave />
+          <main className={`${homeStyle["psi-hadir-container"]}`}>
+            <p className={`${homeStyle["psi-hadir-container-psi-hadir"]}`}>
+              #PSI Hadir
+            </p>
+            <h1
+              className={`${homeStyle["psi-hadir-container-liputan-kegiatan-psi"]}`}
+            >
+              LIPUTAN KEGIATAN DPC BOJONGSARI DEPOK PSI
+            </h1>
+            <section className={`${homeStyle["psi-hadir-container-cards"]}`}>
+              <div className={`${homeStyle["psi-hadir-container-card"]}`}>
+                <a
+                  className={`${homeStyle["psi-hadir-container-card-link"]}`}
+                  href="#"
+                >
+                  <Image
+                    width={1000}
+                    height={1000}
+                    src={"/assets/Raja-Juli-2.jpeg"}
+                    alt="Image"
+                    className={`${homeStyle["psi-hadir-container-card-link-image"]}`}
+                    fetchPriority="high"
+                  ></Image>
+                </a>
+                <h2
+                  className={`${homeStyle["psi-hadir-container-card-title"]}`}
+                >
+                  PSI: Soal Cawapres 2029, Kita Serahkan kepada Pak Prabowo
+                </h2>
+                <span
+                  className={`${homeStyle["psi-hadir-container-card-date"]}`}
+                >
+                  11 February, 2026
+                </span>
+              </div>
+
+              <div className={`${homeStyle["psi-hadir-container-card"]}`}>
+                <a
+                  className={`${homeStyle["psi-hadir-container-card-link"]}`}
+                  href="#"
+                >
+                  <Image
+                    width={1000}
+                    height={1000}
+                    src={"/assets/Raja-Juli-2.jpeg"}
+                    alt="Image"
+                    className={`${homeStyle["psi-hadir-container-card-link-image"]}`}
+                    fetchPriority="high"
+                  ></Image>
+                </a>
+                <h2
+                  className={`${homeStyle["psi-hadir-container-card-title"]}`}
+                >
+                  PSI: Soal Cawapres 2029, Kita Serahkan kepada Pak Prabowo
+                </h2>
+                <span
+                  className={`${homeStyle["psi-hadir-container-card-date"]}`}
+                >
+                  11 February, 2026
+                </span>
+              </div>
+
+              <div className={`${homeStyle["psi-hadir-container-card"]}`}>
+                <a
+                  className={`${homeStyle["psi-hadir-container-card-link"]}`}
+                  href="#"
+                >
+                  <Image
+                    width={1000}
+                    height={1000}
+                    src={"/assets/Raja-Juli-2.jpeg"}
+                    alt="Image"
+                    className={`${homeStyle["psi-hadir-container-card-link-image"]}`}
+                    fetchPriority="high"
+                  ></Image>
+                </a>
+                <h2
+                  className={`${homeStyle["psi-hadir-container-card-title"]}`}
+                >
+                  PSI: Soal Cawapres 2029, Kita Serahkan kepada Pak Prabowo
+                </h2>
+                <span
+                  className={`${homeStyle["psi-hadir-container-card-date"]}`}
+                >
+                  11 February, 2026
+                </span>
+              </div>
+
+              <div className={`${homeStyle["psi-hadir-container-card"]}`}>
+                <a
+                  className={`${homeStyle["psi-hadir-container-card-link"]}`}
+                  href="#"
+                >
+                  <Image
+                    width={1000}
+                    height={1000}
+                    src={"/assets/Raja-Juli-2.jpeg"}
+                    alt="Image"
+                    className={`${homeStyle["psi-hadir-container-card-link-image"]}`}
+                    fetchPriority="high"
+                  ></Image>
+                </a>
+                <h2
+                  className={`${homeStyle["psi-hadir-container-card-title"]}`}
+                >
+                  PSI: Soal Cawapres 2029, Kita Serahkan kepada Pak Prabowo
+                </h2>
+                <span
+                  className={`${homeStyle["psi-hadir-container-card-date"]}`}
+                >
+                  11 February, 2026
+                </span>
+              </div>
+
+              <div className={`${homeStyle["psi-hadir-container-card"]}`}>
+                <a
+                  className={`${homeStyle["psi-hadir-container-card-link"]}`}
+                  href="#"
+                >
+                  <Image
+                    width={1000}
+                    height={1000}
+                    src={"/assets/Raja-Juli-2.jpeg"}
+                    alt="Image"
+                    className={`${homeStyle["psi-hadir-container-card-link-image"]}`}
+                    fetchPriority="high"
+                  ></Image>
+                </a>
+                <h2
+                  className={`${homeStyle["psi-hadir-container-card-title"]}`}
+                >
+                  PSI: Soal Cawapres 2029, Kita Serahkan kepada Pak Prabowo
+                </h2>
+                <span
+                  className={`${homeStyle["psi-hadir-container-card-date"]}`}
+                >
+                  11 February, 2026
+                </span>
+              </div>
+
+              <div className={`${homeStyle["psi-hadir-container-card"]}`}>
+                <a
+                  className={`${homeStyle["psi-hadir-container-card-link"]}`}
+                  href="#"
+                >
+                  <Image
+                    width={1000}
+                    height={1000}
+                    src={"/assets/Raja-Juli-2.jpeg"}
+                    alt="Image"
+                    className={`${homeStyle["psi-hadir-container-card-link-image"]}`}
+                    fetchPriority="high"
+                  ></Image>
+                </a>
+                <h2
+                  className={`${homeStyle["psi-hadir-container-card-title"]}`}
+                >
+                  PSI: Soal Cawapres 2029, Kita Serahkan kepada Pak Prabowo
+                </h2>
+                <span
+                  className={`${homeStyle["psi-hadir-container-card-date"]}`}
+                >
+                  11 February, 2026
+                </span>
+              </div>
+
+              <div className={`${homeStyle["psi-hadir-container-card"]}`}>
+                <a
+                  className={`${homeStyle["psi-hadir-container-card-link"]}`}
+                  href="#"
+                >
+                  <Image
+                    width={1000}
+                    height={1000}
+                    src={"/assets/Raja-Juli-2.jpeg"}
+                    alt="Image"
+                    className={`${homeStyle["psi-hadir-container-card-link-image"]}`}
+                    fetchPriority="high"
+                  ></Image>
+                </a>
+                <h2
+                  className={`${homeStyle["psi-hadir-container-card-title"]}`}
+                >
+                  PSI: Soal Cawapres 2029, Kita Serahkan kepada Pak Prabowo
+                </h2>
+                <span
+                  className={`${homeStyle["psi-hadir-container-card-date"]}`}
+                >
+                  11 February, 2026
+                </span>
+              </div>
+
+              <div className={`${homeStyle["psi-hadir-container-card"]}`}>
+                <a
+                  className={`${homeStyle["psi-hadir-container-card-link"]}`}
+                  href="#"
+                >
+                  <Image
+                    width={1000}
+                    height={1000}
+                    src={"/assets/Raja-Juli-2.jpeg"}
+                    alt="Image"
+                    className={`${homeStyle["psi-hadir-container-card-link-image"]}`}
+                    fetchPriority="high"
+                  ></Image>
+                </a>
+                <h2
+                  className={`${homeStyle["psi-hadir-container-card-title"]}`}
+                >
+                  PSI: Soal Cawapres 2029, Kita Serahkan kepada Pak Prabowo
+                </h2>
+                <span
+                  className={`${homeStyle["psi-hadir-container-card-date"]}`}
+                >
+                  11 February, 2026
+                </span>
+              </div>
+            </section>
+          </main>
+          <BottomWave />
+
+          <main className={`${homeStyle["psi-kerja-container"]}`}>
+            <p className={`${homeStyle["psi-kerja-container-psi-kerja"]}`}>
+              #PSI Kerja
+            </p>
+            <h1
+              className={`${homeStyle["psi-kerja-container-pernyataan-sikap-psi"]}`}
+            >
+              PERNYATAAN SIKAP DPC BOJONGSARI DEPOK PSI
+            </h1>
+            <section className={`${homeStyle["psi-kerja-container-lists"]}`}>
+              <div className={`${homeStyle["psi-kerja-container-lists-list"]}`}>
+                <Link
+                  href={""}
+                  className={`${homeStyle["psi-kerja-container-lists-list-link"]}`}
+                >
+                  <Image
+                    width={1000}
+                    height={1000}
+                    src={"/assets/Raja-Juli-2.jpeg"}
+                    alt="Image"
+                    className={`${homeStyle["psi-kerja-container-lists-list-link-image"]}`}
+                    fetchPriority="high"
+                  ></Image>
+                </Link>
+                <div
+                  className={`${homeStyle["psi-kerja-container-lists-list-stack"]}`}
+                >
+                  <Link
+                    href={""}
+                    className={`${homeStyle["psi-kerja-container-lists-list-stack-title"]}`}
+                  >
+                    PSI Bantu Warga Terdampak Tanah Bergerak di Kabupaten Tegal
+                  </Link>
+                  <div
+                    className={`${homeStyle["psi-kerja-container-lists-list-stack-line-divider"]}`}
+                  >
+                    {""}
+                  </div>
+                  <div
+                    className={`${homeStyle["psi-kerja-container-lists-list-stack-date"]}`}
+                  >
+                    <CalendarIcon></CalendarIcon>
+                    <span>10 February, 2026</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className={`${homeStyle["psi-kerja-container-lists-list"]}`}>
+                <Link
+                  href={""}
+                  className={`${homeStyle["psi-kerja-container-lists-list-link"]}`}
+                >
+                  <Image
+                    width={1000}
+                    height={1000}
+                    src={"/assets/Raja-Juli-2.jpeg"}
+                    alt="Image"
+                    className={`${homeStyle["psi-kerja-container-lists-list-link-image"]}`}
+                    fetchPriority="high"
+                  ></Image>
+                </Link>
+                <div
+                  className={`${homeStyle["psi-kerja-container-lists-list-stack"]}`}
+                >
+                  <Link
+                    href={""}
+                    className={`${homeStyle["psi-kerja-container-lists-list-stack-title"]}`}
+                  >
+                    PSI Bantu Warga Terdampak Tanah Bergerak di Kabupaten Tegal
+                  </Link>
+                  <div
+                    className={`${homeStyle["psi-kerja-container-lists-list-stack-line-divider"]}`}
+                  >
+                    {""}
+                  </div>
+                  <div
+                    className={`${homeStyle["psi-kerja-container-lists-list-stack-date"]}`}
+                  >
+                    <CalendarIcon></CalendarIcon>
+                    <span>10 February, 2026</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className={`${homeStyle["psi-kerja-container-lists-list"]}`}>
+                <Link
+                  href={""}
+                  className={`${homeStyle["psi-kerja-container-lists-list-link"]}`}
+                >
+                  <Image
+                    width={1000}
+                    height={1000}
+                    src={"/assets/Raja-Juli-2.jpeg"}
+                    alt="Image"
+                    className={`${homeStyle["psi-kerja-container-lists-list-link-image"]}`}
+                    fetchPriority="high"
+                  ></Image>
+                </Link>
+                <div
+                  className={`${homeStyle["psi-kerja-container-lists-list-stack"]}`}
+                >
+                  <Link
+                    href={""}
+                    className={`${homeStyle["psi-kerja-container-lists-list-stack-title"]}`}
+                  >
+                    PSI Bantu Warga Terdampak Tanah Bergerak di Kabupaten Tegal
+                  </Link>
+                  <div
+                    className={`${homeStyle["psi-kerja-container-lists-list-stack-line-divider"]}`}
+                  >
+                    {""}
+                  </div>
+                  <div
+                    className={`${homeStyle["psi-kerja-container-lists-list-stack-date"]}`}
+                  >
+                    <CalendarIcon></CalendarIcon>
+                    <span>10 February, 2026</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </main>
+        </>
+      </body>
+    </html>
   );
 }
