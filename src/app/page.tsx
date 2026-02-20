@@ -34,6 +34,7 @@ export default function Home() {
               Jane Nadeak, Ketua DPC PSI Bojongsari Depok
             </h1>
           </div>
+
           <div
             className={`${homeStyle["daftar-anggota-relawan-flex-row"]} ${homeStyle["daftar-anggota-relawan-flex-column"]}`}
           >
@@ -42,6 +43,7 @@ export default function Home() {
               Daftar Relawan
             </Link>
           </div>
+
           <TopWave />
           <main className={`${homeStyle["psi-hadir-container"]}`}>
             <p className={`${homeStyle["psi-hadir-container-psi-hadir"]}`}>
@@ -67,11 +69,16 @@ export default function Home() {
                     fetchPriority="high"
                   ></Image>
                 </a>
-                <h2
+                <Link
+                  href={""}
                   className={`${homeStyle["psi-hadir-container-card-title"]}`}
                 >
-                  PSI: Soal Cawapres 2029, Kita Serahkan kepada Pak Prabowo
-                </h2>
+                  <h2
+                    className={`${homeStyle["psi-hadir-container-card-title-title"]}`}
+                  >
+                    PSI: Soal Cawapres 2029, Kita Serahkan kepada Pak Prabowo
+                  </h2>
+                </Link>
                 <span
                   className={`${homeStyle["psi-hadir-container-card-date"]}`}
                 >
@@ -93,11 +100,16 @@ export default function Home() {
                     fetchPriority="high"
                   ></Image>
                 </a>
-                <h2
+                <Link
+                  href={""}
                   className={`${homeStyle["psi-hadir-container-card-title"]}`}
                 >
-                  PSI: Soal Cawapres 2029, Kita Serahkan kepada Pak Prabowo
-                </h2>
+                  <h2
+                    className={`${homeStyle["psi-hadir-container-card-title-title"]}`}
+                  >
+                    PSI: Soal Cawapres 2029, Kita Serahkan kepada Pak Prabowo
+                  </h2>
+                </Link>
                 <span
                   className={`${homeStyle["psi-hadir-container-card-date"]}`}
                 >
@@ -119,11 +131,16 @@ export default function Home() {
                     fetchPriority="high"
                   ></Image>
                 </a>
-                <h2
+                <Link
+                  href={""}
                   className={`${homeStyle["psi-hadir-container-card-title"]}`}
                 >
-                  PSI: Soal Cawapres 2029, Kita Serahkan kepada Pak Prabowo
-                </h2>
+                  <h2
+                    className={`${homeStyle["psi-hadir-container-card-title-title"]}`}
+                  >
+                    PSI: Soal Cawapres 2029, Kita Serahkan kepada Pak Prabowo
+                  </h2>
+                </Link>
                 <span
                   className={`${homeStyle["psi-hadir-container-card-date"]}`}
                 >
@@ -145,11 +162,16 @@ export default function Home() {
                     fetchPriority="high"
                   ></Image>
                 </a>
-                <h2
+                <Link
+                  href={""}
                   className={`${homeStyle["psi-hadir-container-card-title"]}`}
                 >
-                  PSI: Soal Cawapres 2029, Kita Serahkan kepada Pak Prabowo
-                </h2>
+                  <h2
+                    className={`${homeStyle["psi-hadir-container-card-title-title"]}`}
+                  >
+                    PSI: Soal Cawapres 2029, Kita Serahkan kepada Pak Prabowo
+                  </h2>
+                </Link>
                 <span
                   className={`${homeStyle["psi-hadir-container-card-date"]}`}
                 >
@@ -171,11 +193,16 @@ export default function Home() {
                     fetchPriority="high"
                   ></Image>
                 </a>
-                <h2
+                <Link
+                  href={""}
                   className={`${homeStyle["psi-hadir-container-card-title"]}`}
                 >
-                  PSI: Soal Cawapres 2029, Kita Serahkan kepada Pak Prabowo
-                </h2>
+                  <h2
+                    className={`${homeStyle["psi-hadir-container-card-title-title"]}`}
+                  >
+                    PSI: Soal Cawapres 2029, Kita Serahkan kepada Pak Prabowo
+                  </h2>
+                </Link>
                 <span
                   className={`${homeStyle["psi-hadir-container-card-date"]}`}
                 >
@@ -197,63 +224,16 @@ export default function Home() {
                     fetchPriority="high"
                   ></Image>
                 </a>
-                <h2
+                <Link
+                  href={""}
                   className={`${homeStyle["psi-hadir-container-card-title"]}`}
                 >
-                  PSI: Soal Cawapres 2029, Kita Serahkan kepada Pak Prabowo
-                </h2>
-                <span
-                  className={`${homeStyle["psi-hadir-container-card-date"]}`}
-                >
-                  11 February, 2026
-                </span>
-              </div>
-
-              <div className={`${homeStyle["psi-hadir-container-card"]}`}>
-                <a
-                  className={`${homeStyle["psi-hadir-container-card-link"]}`}
-                  href="#"
-                >
-                  <Image
-                    width={1000}
-                    height={1000}
-                    src={"/assets/Raja-Juli-2.jpeg"}
-                    alt="Image"
-                    className={`${homeStyle["psi-hadir-container-card-link-image"]}`}
-                    fetchPriority="high"
-                  ></Image>
-                </a>
-                <h2
-                  className={`${homeStyle["psi-hadir-container-card-title"]}`}
-                >
-                  PSI: Soal Cawapres 2029, Kita Serahkan kepada Pak Prabowo
-                </h2>
-                <span
-                  className={`${homeStyle["psi-hadir-container-card-date"]}`}
-                >
-                  11 February, 2026
-                </span>
-              </div>
-
-              <div className={`${homeStyle["psi-hadir-container-card"]}`}>
-                <a
-                  className={`${homeStyle["psi-hadir-container-card-link"]}`}
-                  href="#"
-                >
-                  <Image
-                    width={1000}
-                    height={1000}
-                    src={"/assets/Raja-Juli-2.jpeg"}
-                    alt="Image"
-                    className={`${homeStyle["psi-hadir-container-card-link-image"]}`}
-                    fetchPriority="high"
-                  ></Image>
-                </a>
-                <h2
-                  className={`${homeStyle["psi-hadir-container-card-title"]}`}
-                >
-                  PSI: Soal Cawapres 2029, Kita Serahkan kepada Pak Prabowo
-                </h2>
+                  <h2
+                    className={`${homeStyle["psi-hadir-container-card-title-title"]}`}
+                  >
+                    PSI: Soal Cawapres 2029, Kita Serahkan kepada Pak Prabowo
+                  </h2>
+                </Link>
                 <span
                   className={`${homeStyle["psi-hadir-container-card-date"]}`}
                 >
@@ -305,7 +285,7 @@ export default function Home() {
                   <div
                     className={`${homeStyle["psi-kerja-container-lists-list-stack-date"]}`}
                   >
-                    <CalendarIcon></CalendarIcon>
+                    <CalendarIcon color={"#000"}></CalendarIcon>
                     <span>10 February, 2026</span>
                   </div>
                 </div>
@@ -342,7 +322,7 @@ export default function Home() {
                   <div
                     className={`${homeStyle["psi-kerja-container-lists-list-stack-date"]}`}
                   >
-                    <CalendarIcon></CalendarIcon>
+                    <CalendarIcon color={"#000"}></CalendarIcon>
                     <span>10 February, 2026</span>
                   </div>
                 </div>
@@ -379,13 +359,55 @@ export default function Home() {
                   <div
                     className={`${homeStyle["psi-kerja-container-lists-list-stack-date"]}`}
                   >
-                    <CalendarIcon></CalendarIcon>
+                    <CalendarIcon color={"#000"}></CalendarIcon>
                     <span>10 February, 2026</span>
                   </div>
                 </div>
               </div>
             </section>
           </main>
+
+          <TopWave />
+          <main className={`${homeStyle["blog-container"]}`}>
+            <p className={`${homeStyle["blog-container-blog"]}`}>#BLOG</p>
+            <h1 className={`${homeStyle["blog-container-blog-dpc"]}`}>
+              BLOG DPC BOJONGSARI DEPOK PSI
+            </h1>
+            <section className={`${homeStyle["blog-container-cards"]}`}>
+              <div className={`${homeStyle["blog-container-cards-card"]}`}>
+                <a
+                  className={`${homeStyle["blog-container-cards-card-link"]}`}
+                  href="#"
+                >
+                  <Image
+                    width={1000}
+                    height={1000}
+                    src={"/assets/Raja-Juli-2.jpeg"}
+                    alt="Image"
+                    className={`${homeStyle["blog-container-cards-card-link-image"]}`}
+                    fetchPriority="high"
+                  ></Image>
+                </a>
+                <Link
+                  href={""}
+                  className={`${homeStyle["blog-container-cards-card-link-title"]}`}
+                >
+                  <h2
+                    className={`${homeStyle["blog-container-cards-card-link-title-title"]}`}
+                  >
+                    PSI: Soal Cawapres 2029, Kita Serahkan kepada Pak Prabowo
+                  </h2>
+                </Link>
+                <div
+                  className={`${homeStyle["blog-container-cards-card-date"]}`}
+                >
+                  <CalendarIcon color={"rgb(105, 105, 105)"}></CalendarIcon>
+                  <span>11 February, 2026</span>
+                </div>
+              </div>
+            </section>
+          </main>
+          <BottomWave />
         </>
       </body>
     </html>
