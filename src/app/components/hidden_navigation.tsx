@@ -5,9 +5,9 @@ import Image from "next/image";
 import hiddenNavigationStyle from "@/app/styles/hidden_navigation.module.css";
 import CloseIcon from "./icons/close_icon";
 import { MouseEventHandler, useEffect, useRef, useState } from "react";
-
+import database_connection_pool from "../libs/connection_pool";
 export default function HiddenNavigationComponent() {
-  const hiddenLeftSideNavigationRef = useRef(null);
+  const hiddenLeftSideNavigationRef = useRef<HTMLElement | null>(null);
 
   const [isClosed, setIsClosed] = useState(true);
   function funcSetIsClosedValue() {

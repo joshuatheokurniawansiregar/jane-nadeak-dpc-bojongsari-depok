@@ -1,3 +1,4 @@
+import "./styles/globals.css";
 import Image from "next/image";
 import Link from "next/link";
 import HeaderComponent from "./components/header_component";
@@ -7,7 +8,17 @@ import homeStyle from "@/app/styles/home.module.css";
 import TopWave from "./components/icons/top_wave";
 import BottomWave from "./components/icons/bottom_wave";
 import CalendarIcon from "./components/icons/calendar_icon";
+import database_connection_pool from "./libs/connection_pool";
 export default function Home() {
+  const testFunc = async () => {
+    try {
+      const client = database_connection_pool.connect();
+      console.log("Connection has been established successfully.");
+      (await client).release();
+    } catch (error) {
+      console.error(error);
+    }
+  };
   return (
     <html>
       <head></head>
@@ -47,7 +58,7 @@ export default function Home() {
           <TopWave />
           <main className={`${homeStyle["psi-hadir-container"]}`}>
             <p className={`${homeStyle["psi-hadir-container-psi-hadir"]}`}>
-              #PSI Hadir
+              #DPC Bojongsari PSI Hadir
             </p>
             <h1
               className={`${homeStyle["psi-hadir-container-liputan-kegiatan-psi"]}`}
@@ -373,7 +384,168 @@ export default function Home() {
             <h1 className={`${homeStyle["blog-container-blog-dpc"]}`}>
               BLOG DPC BOJONGSARI DEPOK PSI
             </h1>
+
             <section className={`${homeStyle["blog-container-cards"]}`}>
+              <div className={`${homeStyle["blog-container-cards-card"]}`}>
+                <a
+                  className={`${homeStyle["blog-container-cards-card-link"]}`}
+                  href="#"
+                >
+                  <Image
+                    width={1000}
+                    height={1000}
+                    src={"/assets/Raja-Juli-2.jpeg"}
+                    alt="Image"
+                    className={`${homeStyle["blog-container-cards-card-link-image"]}`}
+                    fetchPriority="high"
+                  ></Image>
+                </a>
+                <Link
+                  href={""}
+                  className={`${homeStyle["blog-container-cards-card-link-title"]}`}
+                >
+                  <h2
+                    className={`${homeStyle["blog-container-cards-card-link-title-title"]}`}
+                  >
+                    PSI: Soal Cawapres 2029, Kita Serahkan kepada Pak Prabowo
+                  </h2>
+                </Link>
+                <div
+                  className={`${homeStyle["blog-container-cards-card-date"]}`}
+                >
+                  <CalendarIcon color={"rgb(105, 105, 105)"}></CalendarIcon>
+                  <span>11 February, 2026</span>
+                </div>
+              </div>
+
+              <div className={`${homeStyle["blog-container-cards-card"]}`}>
+                <a
+                  className={`${homeStyle["blog-container-cards-card-link"]}`}
+                  href="#"
+                >
+                  <Image
+                    width={1000}
+                    height={1000}
+                    src={"/assets/Raja-Juli-2.jpeg"}
+                    alt="Image"
+                    className={`${homeStyle["blog-container-cards-card-link-image"]}`}
+                    fetchPriority="high"
+                  ></Image>
+                </a>
+                <Link
+                  href={""}
+                  className={`${homeStyle["blog-container-cards-card-link-title"]}`}
+                >
+                  <h2
+                    className={`${homeStyle["blog-container-cards-card-link-title-title"]}`}
+                  >
+                    PSI: Soal Cawapres 2029, Kita Serahkan kepada Pak Prabowo
+                  </h2>
+                </Link>
+                <div
+                  className={`${homeStyle["blog-container-cards-card-date"]}`}
+                >
+                  <CalendarIcon color={"rgb(105, 105, 105)"}></CalendarIcon>
+                  <span>11 February, 2026</span>
+                </div>
+              </div>
+
+              <div className={`${homeStyle["blog-container-cards-card"]}`}>
+                <a
+                  className={`${homeStyle["blog-container-cards-card-link"]}`}
+                  href="#"
+                >
+                  <Image
+                    width={1000}
+                    height={1000}
+                    src={"/assets/Raja-Juli-2.jpeg"}
+                    alt="Image"
+                    className={`${homeStyle["blog-container-cards-card-link-image"]}`}
+                    fetchPriority="high"
+                  ></Image>
+                </a>
+                <Link
+                  href={""}
+                  className={`${homeStyle["blog-container-cards-card-link-title"]}`}
+                >
+                  <h2
+                    className={`${homeStyle["blog-container-cards-card-link-title-title"]}`}
+                  >
+                    PSI: Soal Cawapres 2029, Kita Serahkan kepada Pak Prabowo
+                  </h2>
+                </Link>
+                <div
+                  className={`${homeStyle["blog-container-cards-card-date"]}`}
+                >
+                  <CalendarIcon color={"rgb(105, 105, 105)"}></CalendarIcon>
+                  <span>11 February, 2026</span>
+                </div>
+              </div>
+
+              <div className={`${homeStyle["blog-container-cards-card"]}`}>
+                <a
+                  className={`${homeStyle["blog-container-cards-card-link"]}`}
+                  href="#"
+                >
+                  <Image
+                    width={1000}
+                    height={1000}
+                    src={"/assets/Raja-Juli-2.jpeg"}
+                    alt="Image"
+                    className={`${homeStyle["blog-container-cards-card-link-image"]}`}
+                    fetchPriority="high"
+                  ></Image>
+                </a>
+                <Link
+                  href={""}
+                  className={`${homeStyle["blog-container-cards-card-link-title"]}`}
+                >
+                  <h2
+                    className={`${homeStyle["blog-container-cards-card-link-title-title"]}`}
+                  >
+                    PSI: Soal Cawapres 2029, Kita Serahkan kepada Pak Prabowo
+                  </h2>
+                </Link>
+                <div
+                  className={`${homeStyle["blog-container-cards-card-date"]}`}
+                >
+                  <CalendarIcon color={"rgb(105, 105, 105)"}></CalendarIcon>
+                  <span>11 February, 2026</span>
+                </div>
+              </div>
+
+              <div className={`${homeStyle["blog-container-cards-card"]}`}>
+                <a
+                  className={`${homeStyle["blog-container-cards-card-link"]}`}
+                  href="#"
+                >
+                  <Image
+                    width={1000}
+                    height={1000}
+                    src={"/assets/Raja-Juli-2.jpeg"}
+                    alt="Image"
+                    className={`${homeStyle["blog-container-cards-card-link-image"]}`}
+                    fetchPriority="high"
+                  ></Image>
+                </a>
+                <Link
+                  href={""}
+                  className={`${homeStyle["blog-container-cards-card-link-title"]}`}
+                >
+                  <h2
+                    className={`${homeStyle["blog-container-cards-card-link-title-title"]}`}
+                  >
+                    PSI: Soal Cawapres 2029, Kita Serahkan kepada Pak Prabowo
+                  </h2>
+                </Link>
+                <div
+                  className={`${homeStyle["blog-container-cards-card-date"]}`}
+                >
+                  <CalendarIcon color={"rgb(105, 105, 105)"}></CalendarIcon>
+                  <span>11 February, 2026</span>
+                </div>
+              </div>
+
               <div className={`${homeStyle["blog-container-cards-card"]}`}>
                 <a
                   className={`${homeStyle["blog-container-cards-card-link"]}`}
